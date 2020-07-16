@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="/style/SanPham.css" />
+    <script
+      src="https://kit.fontawesome.com/e989f88264.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="overlate"></div>
+    <header id="header">
+      <div id="left">
+        <a href="/TrangChu.html" id="logo" style="text-decoration: none;">
+          <i class="fab fa-battle-net"></i
+          ><span id="title"><b>TripleB</b></span>
+        </a>
+        <div id="nav">
+          <nav>
+            <a href="#">T-SHIRT</a>
+            <a href="#">HOODIE</a>
+            <a href="/SanPham.html">SHOES</a>
+            <a href="#">JEAN</a>
+            <a href="#">HAT</a>
+          </nav>
+        </div>
+      </div>
+      <div id="right">
+        <div id="cart">
+          <div><i class="fab fa-opencart"></i><span>0</span></div>
+        </div>
+        <div id="input">
+          <input
+            type="text"
+            name=""
+            id="search"
+            placeholder="Nhập từ khóa..."
+            onkeyup="myFunction()"
+          />
+          <span>Tìm Kiếm</span>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="Top">
+        <div class="imgContainer">
+          <div class="slideshows"><img src="/img/banner/s1.jpg" alt="" /></div>
+          <div class="slideshows"><img src="/img/banner/s2.jpg" alt="" /></div>
+
+          <div class="slideshows"><img src="/img/banner/s4.jpg" alt="" /></div>
+        </div>
+        <a id="prev"><i class="fas fa-chevron-left"></i></a>
+        <a id="next"><i class="fas fa-chevron-right"></i></a>
+        <div class="TitleSP">
+          <span>Giày</span>
+          <div id="btnFilter"><i class="fas fa-filter"></i>Bộ lọc</div>
+        </div>
+      </div>
+      <div class="Bot">
+        <div id="filter">
+          <i id="btnCloseFilter" class="fas fa-times-circle"></i>
+          <div class="gender">
+            <h1 class="filterTitle">Giới Tính</h1>
+            <div class="CheckBox">
+              <input type="checkbox" /><span>Nam</span>
+            </div>
+            <div class="CheckBox"><input type="checkbox" /><span>Nữ</span></div>
+          </div>
+          <div class="size">
+            <h1 class="filterTitle">Size</h1>
+            <div class="sizeContainer">
+              <div class="CheckBox">
+                <input type="checkbox" /><span>35</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>36</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>37</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>38</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>39</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>40</span>
+              </div>
+            </div>
+          </div>
+          <div class="brand">
+            <h1 class="filterTitle">Thương Hiệu</h1>
+            <div class="brandContainer">
+              <div class="CheckBox">
+                <input type="checkbox" checked="true" /><span>Nike</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>Adidas</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>Converse</span>
+              </div>
+              <div class="CheckBox">
+                <input type="checkbox" /><span>Bitis</span>
+              </div>
+            </div>
+          </div>
+          <div class="slidecontainer">
+            <h1 id="Price">
+              Giá: < <span id="demo"></span>,000<span style="color: #e91e63;"
+                >$</span
+              >
+            </h1>
+            <input
+              type="range"
+              min="1"
+              max="900"
+              value="2000000"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
+        <div class="bigContainer">
+          <div id="Products" class="products">
+            <div class="cart">
+              <a href="/ChiTiet.html" class="imgContainer">
+                <img id="n1" src="img/products/n1.jpg" alt="" />
+                <img id="n11" src="img/products/n11.jpg" alt="" />
+              </a>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike Blazer Mid '77 Vintage</div>
+                  <div class="price">2,929<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn1" class="colorImg">
+                      <img src="/img/products/n1.jpg" alt="" />
+                    </div>
+                    <div id="btn11" class="colorImg">
+                      <img src="/img/products/n11.jpg" alt="" />
+                    </div>
+                    <a href="/DatHang.html" class="btnBuy">Đặt hàng</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n2" src="img/products/n2.jpg" alt="" />
+                <img id="n22" src="img/products/n22.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike Air Pegasus 37</div>
+                  <div class="price">3,519<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn2" class="colorImg">
+                      <img src="/img/products/n2.jpg" alt="" />
+                    </div>
+                    <div id="btn22" class="colorImg">
+                      <img src="/img/products/n22.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n3" src="img/products/n3.jpg" alt="" />
+                <img id="n33" src="img/products/n33.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike React Infinity Run Flyknit</div>
+                  <div class="price">4,699<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn3" class="colorImg">
+                      <img src="/img/products/n3.jpg" alt="" />
+                    </div>
+                    <div id="btn33" class="colorImg">
+                      <img src="/img/products/n33.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n4" src="img/products/n4.jpg" alt="" />
+                <img id="n44" src="img/products/n44.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike Court Vintage Premium</div>
+                  <div class="price">2,069<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn4" class="colorImg">
+                      <img src="/img/products/n4.jpg" alt="" />
+                    </div>
+                    <div id="btn44" class="colorImg">
+                      <img src="/img/products/n44.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n5" src="img/products/n5.jpg" alt="" />
+                <img id="n55" src="img/products/n55.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike Air Force 1'07</div>
+                  <div class="price">2,649<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn5" class="colorImg">
+                      <img src="/img/products/n5.jpg" alt="" />
+                    </div>
+                    <div id="btn55" class="colorImg">
+                      <img src="/img/products/n55.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n6" src="img/products/n6.jpg" alt="" />
+                <img id="n66" src="img/products/n66.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike Air Zoom SupperRep</div>
+                  <div class="price">5,519<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn6" class="colorImg">
+                      <img src="/img/products/n6.jpg" alt="" />
+                    </div>
+                    <div id="btn66" class="colorImg">
+                      <img src="/img/products/n66.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n7" src="img/products/n7.jpg" alt="" />
+                <img id="n77" src="img/products/n77.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Air Jordan XXXIV PF</div>
+                  <div class="price">5,129<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn7" class="colorImg">
+                      <img src="/img/products/n7.jpg" alt="" />
+                    </div>
+                    <div id="btn77" class="colorImg">
+                      <img src="/img/products/n77.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n8" src="img/products/n8.jpg" alt="" />
+                <img id="n88" src="img/products/n88.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">Nike Air VaporMax 360</div>
+                  <div class="price">6,609<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn8" class="colorImg">
+                      <img src="/img/products/n8.jpg" alt="" />
+                    </div>
+                    <div id="btn88" class="colorImg">
+                      <img src="/img/products/n88.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="imgContainer">
+                <img id="n9" src="img/products/n9.jpg" alt="" />
+                <img id="n99" src="img/products/n99.jpg" alt="" />
+              </div>
+              <div class="detail">
+                <div class="TopCart">
+                  <div class="name">LeBron 7 QS</div>
+                  <div class="price">5,278<span>$</span></div>
+                </div>
+                <div class="BotCart">
+                  <span>2 Màu</span>
+                  <div class="ColorOption">
+                    <div id="btn9" class="colorImg">
+                      <img src="/img/products/n9.jpg" alt="" />
+                    </div>
+                    <div id="btn99" class="colorImg">
+                      <img src="/img/products/n99.jpg" alt="" />
+                    </div>
+                    <div class="btnBuy">Đặt hàng</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="PGcontainer">
+              <div class="btnpage"><i class="fas fa-chevron-left"></i></div>
+              <div class="page">1</div>
+              <div class="page">2</div>
+              <div class="page">3</div>
+              <div class="page">4</div>
+              <div class="page">5</div>
+              <div class="page">6</div>
+              <div class="btnpage"><i class="fas fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <b class="title">Hệ thống cửa hàng</b>
+        <span class="item">48 Nguyễn Thị Tần, F2, Q8, TP.HCM</span>
+        <span class="item">420 Quang Trung, F14, Q.Gò Vấp, TP.HCM</span>
+      </div>
+      <div class="container">
+        <b class="title">Hỗ trợ khách hàng</b>
+        <span class="item">Hot line: 0916707527</span>
+        <span class="item">Gmail: bhtien98@gmail.com</span>
+      </div>
+      <div class="container">
+        <span class="item">MADE BY: Bùi Huỳnh Tiến</span>
+        <span class="item">SĐT:0916707527</span>
+        <span class="item">Gmail: bhtien98@gmail.com</span>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/SanPham.js"></script>
+</html>

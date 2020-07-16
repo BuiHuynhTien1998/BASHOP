@@ -1,0 +1,646 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+*::-webkit-scrollbar {
+  width: 0px;
+}
+img {
+  width: 100%;
+}
+#header {
+  width: 100%;
+  display: flex;
+  height: fit-content;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 2;
+  overflow: hidden;
+  transition: 1s;
+}
+
+#header #left {
+  display: flex;
+  width: 100%;
+}
+
+#header #left #logo {
+  width: 355px;
+  display: flex;
+  height: 60px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  margin-right: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#header #left #logo #title {
+  margin-left: 20px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+
+#header #left #nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#header #left #nav nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#header #left #nav nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  margin-right: 15px;
+  color: black;
+  letter-spacing: 2px;
+  border-bottom: 2px solid white;
+  transition: 0.13s;
+}
+#header #left #nav nav a:hover {
+  border-bottom: 2px solid black;
+}
+#header #right {
+  display: flex;
+  width: 100%;
+}
+
+#header #right #cart {
+  width: 100%;
+  min-height: 20px;
+}
+#header #right #cart div {
+  margin-left: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 40px;
+  cursor: pointer;
+}
+#header #right #cart div i {
+  font-size: 40px;
+}
+#header #right #cart div span {
+  position: absolute;
+}
+#header #right #input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#header #right #input #search {
+  height: 25px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-right: 5px;
+}
+
+#header #right #input span {
+  cursor: pointer;
+  transition: 0.13s;
+  font-family: monospace;
+  font-size: 18px;
+}
+/**/
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+#overlate {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: none;
+}
+#main .Top {
+  width: 100%;
+  min-height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+#main .Top .TitleSP {
+  width: 100%;
+  min-height: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 50px;
+  font-size: 30px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  font-family: "Courier New", Courier, monospace;
+}
+#main .Top .TitleSP #btnFilter {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 300px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#main .Top .TitleSP #btnFilter i {
+  margin-right: 5px;
+}
+#main .Top .slideshows {
+  width: 100%;
+  height: fit-content;
+  display: none;
+}
+
+#main .Top #prev {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 1%;
+  top: 40%;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 100%;
+  transition: 0.13s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main .Top #next {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 1%;
+  top: 40%;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 100%;
+  transition: 0.13s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main .Top #next:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#main .Top #prev:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#main .Bot {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  position: relative;
+}
+#main .Bot #filter {
+  width: 0%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-left: 20px;
+  position: fixed;
+  z-index: 4;
+  top: 0px;
+  padding-top: 20px;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.8s;
+}
+#main .Bot #filter #btnCloseFilter {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#main .Bot #filter .gender {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+#main .Bot #filter .gender .CheckBox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-family: monospace;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+#main .Bot #filter .gender .CheckBox input {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#main .Bot #filter .gender .CheckBox span {
+  font-size: 20px;
+}
+#main .Bot #filter .size {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+#main .Bot #filter .size .sizeContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 5px;
+}
+#main .Bot #filter .size .sizeContainer .CheckBox {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+#main .Bot #filter .size .sizeContainer .CheckBox input {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#main .Bot #filter .size .sizeContainer .CheckBox span {
+  font-size: 20px;
+  font-family: monospace;
+}
+#main .Bot #filter .filterTitle {
+  font-family: monospace;
+  width: 100%;
+  margin-bottom: 5px;
+}
+#main .Bot #filter .brand {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+#main .Bot #filter .brand .brandContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 5px;
+}
+#main .Bot #filter .brand .brandContainer .CheckBox input {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#main .Bot #filter .brand .brandContainer .CheckBox {
+  display: flex;
+  padding-left: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#main .Bot #filter .brand .brandContainer .CheckBox span {
+  font-size: 20px;
+  font-family: monospace;
+}
+/**/
+#main .Bot #filter .slidecontainer {
+  width: 100%;
+  padding-right: 20px;
+}
+
+#main .Bot #filter .slidecontainer .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 30px;
+}
+
+#main .Bot #filter .slidecontainer .slider:hover {
+  opacity: 1;
+}
+
+#main .Bot #filter .slidecontainer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #0075ff;
+  cursor: pointer;
+  border-radius: 100%;
+}
+#main .Bot #filter .slidecontainer #Price {
+  margin-bottom: 10px;
+  font-family: monospace;
+}
+
+/**/
+#main .Bot .bigContainer .products {
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+#main .Bot .bigContainer .products .cart {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+#main .Bot .bigContainer .products .cart .imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#main
+  .Bot
+  .bigContainer
+  .products
+  .cart:hover
+  .detail
+  .BotCart
+  .ColorOption
+  .btnBuy {
+  opacity: 1;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n11 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n22 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n33 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n44 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n55 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n66 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n77 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n88 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .imgContainer #n99 {
+  display: none;
+}
+#main .Bot .bigContainer .products .cart .detail .TopCart {
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  height: 50px;
+}
+#main .Bot .bigContainer .products .cart .detail .TopCart .name {
+  width: 70%;
+}
+#main .Bot .bigContainer .products .cart .detail .TopCart .price {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  padding-right: 10px;
+}
+#main .Bot .bigContainer .products .cart .detail .TopCart .price span {
+  color: #e91e63;
+}
+#main .Bot .bigContainer .products .cart .detail .BotCart .ColorOption {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+#main
+  .Bot
+  .bigContainer
+  .products
+  .cart
+  .detail
+  .BotCart
+  .ColorOption
+  .colorImg {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.5s;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+#main .Bot .bigContainer .products .cart .detail .BotCart .colorImg:hover {
+  border: 2px solid silver;
+}
+
+#main .Bot .bigContainer .products .cart .detail .BotCart .ColorOption .btnBuy {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 10px;
+  transition: 0.13s;
+  opacity: 0;
+  text-decoration: none;
+}
+#main .Bot .bigContainer .pagination {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+#main .Bot .bigContainer .pagination .PGcontainer {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+#main .Bot .bigContainer .pagination .PGcontainer .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.13s;
+}
+#main .Bot .bigContainer .pagination .PGcontainer .page:nth-child(2) {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+#main .Bot .bigContainer .pagination .PGcontainer .page:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+#main .Bot .bigContainer .pagination .PGcontainer .btnpage {
+  cursor: pointer;
+  font-size: 15px;
+}
+/**/
+#footer {
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(31, 13, 13);
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#footer .container {
+  width: 100%;
+  padding-left: 100px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 500px) {
+  #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #header #left {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #header #left #logo {
+    width: 100%;
+    margin-right: 0px;
+  }
+  #header #right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #header #right #input #search {
+    height: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-right: 5px;
+    width: 350px;
+  }
+  #header #right #input {
+    margin-top: 5px;
+  }
+  #header #right #cart div {
+    margin: 0px;
+  }
+  #header #right #cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    right: 10px;
+    top: 150px;
+  }
+  #header #left #nav {
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  #footer {
+    flex-direction: column;
+  }
+  #footer .container {
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  #main .Bot .filter {
+    padding-left: 0px;
+  }
+  #main .Bot .filter .filterTitle {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  #main .Bot .filter .size .sizeContainer {
+    grid-template-columns: auto auto;
+  }
+  #main .Bot .filter .size .sizeContainer .CheckBox span {
+    font-size: 15px;
+  }
+  #main .Bot .filter .size .sizeContainer .CheckBox input {
+    width: 15px;
+    height: 15px;
+  }
+
+  #main .Bot .filter .brand .brandContainer {
+    grid-template-columns: auto;
+  }
+  #main .Bot .filter .brand .brandContainer .CheckBox span {
+    font-size: 15px;
+  }
+  #main .Bot .filter .brand .brandContainer .CheckBox input {
+    width: 15px;
+    height: 15px;
+  }
+  #main .Top .TitleSP #btnFilter {
+    margin-right: 50px;
+  }
+  #main .Bot .bigContainer .products {
+    grid-template-columns: auto auto;
+  }
+}

@@ -1,0 +1,458 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+*::-webkit-scrollbar {
+  width: 0px;
+}
+img {
+  width: 100%;
+}
+#overlate {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+}
+#overlate #form {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  background-color: white;
+  align-items: center;
+  flex-direction: column;
+}
+#overlate #form #btnClose {
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#overlate #form h1 {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#overlate #form .item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  height: fit-content;
+}
+#overlate #form .item input {
+  height: 30px;
+  border: none;
+  border-bottom: 3px solid black;
+  outline: none;
+  width: 300px;
+}
+#overlate #form #logo {
+  width: 300px;
+  display: flex;
+  height: 60px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  padding-left: 15px;
+  text-decoration: none;
+  padding-right: 15px;
+}
+#overlate #form .done {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+#overlate #form .done #btnDone {
+  font-size: 20px;
+  height: 40px;
+  width: 300px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#overlate #form #logo #title {
+  margin-left: 20px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+#header {
+  width: 100%;
+  display: flex;
+  min-height: 10px;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 2;
+  transition: 1s;
+}
+
+#header #left {
+  display: flex;
+  width: 100%;
+}
+
+#header #left #logo {
+  width: 355px;
+  display: flex;
+  height: 60px;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  margin-right: 50px;
+  padding-left: 15px;
+  text-decoration: none;
+  padding-right: 15px;
+}
+
+#header #left #logo #title {
+  margin-left: 20px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+
+#header #left #nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#header #left #nav nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#header #left #nav nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  margin-right: 15px;
+  color: black;
+  letter-spacing: 2px;
+  border-bottom: 2px solid white;
+  transition: 0.13s;
+}
+#header #left #nav nav a:hover {
+  border-bottom: 2px solid black;
+}
+#header #right {
+  display: flex;
+  width: 100%;
+}
+
+#header #right #cart {
+  width: 100%;
+  min-height: 20px;
+}
+#header #right #cart div {
+  margin-left: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 40px;
+  cursor: pointer;
+}
+#header #right #cart div i {
+  font-size: 40px;
+}
+#header #right #cart div span {
+  position: absolute;
+}
+#header #right #input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#header #right #input #search {
+  height: 25px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-right: 5px;
+}
+
+#header #right #input span {
+  cursor: pointer;
+  transition: 0.13s;
+  font-family: monospace;
+  font-size: 18px;
+}
+#main {
+  display: flex;
+  padding: 20px;
+  font-family: monospace;
+}
+#main .right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-right: 20px;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+  padding-bottom: 20px;
+}
+#main .right h1 {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  padding-left: 20px;
+}
+#main .right .total {
+  font-size: 20px;
+  display: flex;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+#main .right .total span {
+  color: #e91e63;
+}
+#main .right .deliver {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#main .right .City {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#main .right .distric {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#main .right .btnContanier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+#main .right .btnContanier #btnDathang {
+  font-size: 20px;
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#main .right select {
+  height: 30px;
+}
+/**/
+#main .left {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-right: 20px;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+#main .left .Top {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-size: 25px;
+  padding-left: 20px;
+}
+#main .left .Bot {
+  display: flex;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+#main .left .Bot .imgContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 446px;
+  overflow: hidden;
+}
+#main .left .Bot .infor {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+#main .left .Bot .infor .btnXoa {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+#main .left .Bot .infor .name {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+#main .left .Bot .infor .price {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+#main .left .Bot .infor .price span {
+  color: #e91e63;
+  margin-bottom: 5px;
+}
+
+#main .left .Bot .infor .MSP {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#main .left .Bot .infor .size {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#main .left .Bot .infor .SL {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#main .left .Bot .infor .SL input {
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+#footer {
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(31, 13, 13);
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+#footer .container {
+  width: 100%;
+  padding-left: 100px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 500px) {
+  #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #header #left {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #header #left #logo {
+    width: 100%;
+    margin-right: 0px;
+  }
+  #header #right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #header #right #cart div {
+    margin: 0px;
+  }
+  #header #right #input #search {
+    width: 350px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-right: 5px;
+  }
+  #header #right #input {
+    margin-top: 5px;
+  }
+  #header #right #cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    right: 10px;
+    top: 150px;
+  }
+  #header #left #nav {
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  #footer {
+    flex-direction: column;
+  }
+  #footer .container {
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  #main {
+    flex-direction: column;
+  }
+  #main .left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #main .left .Bot {
+    flex-direction: column;
+    padding: 0px;
+  }
+  #main .left .Bot .imgContainer {
+    margin-bottom: 10px;
+  }
+  #main .left .Bot .infor {
+    padding-bottom: 10px;
+  }
+  #main .right {
+    width: 100%;
+  }
+  #overlate #form {
+    width: 400px;
+  }
+}

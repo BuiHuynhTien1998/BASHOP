@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Hàng</title>
+    <link rel="stylesheet" href="/style/DatHang.css" />
+    <script
+      src="https://kit.fontawesome.com/e989f88264.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="overlate">
+      <div id="form">
+        <div id="btnClose"><i class="fas fa-times"></i></div>
+        <div id="logo">
+          <i class="fab fa-battle-net"></i
+          ><span id="title"><b>TripleB</b></span>
+        </div>
+        <h1>Thông tin đặt hàng</h1>
+        <div class="item"><input type="text" placeholder="Họ tên..." /></div>
+        <div class="item">
+          <input type="text" placeholder="Số điện thoại..." />
+        </div>
+        <div class="item"><input type="text" placeholder="Địa chỉ..." /></div>
+        <div class="item">
+          <input type="text" placeholder="Mã khuyến mãi..." />
+        </div>
+        <div class="done"><div id="btnDone">Đặt hàng</div></div>
+      </div>
+    </div>
+
+    <header id="header">
+      <div id="left">
+        <a href="/TrangChu.html" id="logo">
+          <i class="fab fa-battle-net"></i
+          ><span id="title"><b>TripleB</b></span>
+        </a>
+        <div id="nav">
+          <nav>
+            <a href="#">T-SHIRT</a>
+            <a href="#">HOODIE</a>
+            <a href="/SanPham.html">SHOES</a>
+            <a href="#">JEAN</a>
+            <a href="#">HAT</a>
+          </nav>
+        </div>
+      </div>
+      <div id="right">
+        <div id="cart">
+          <div><i class="fab fa-opencart"></i><span>0</span></div>
+        </div>
+        <div id="input">
+          <input
+            type="text"
+            name=""
+            id="search"
+            placeholder="Nhập từ khóa..."
+          />
+          <span>Tìm Kiếm</span>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <aside class="left">
+        <div class="Top"><h1>Giỏ hàng</h1></div>
+        <div class="Bot">
+          <div class="imgContainer">
+            <img src="/img/products/n1.jpg" alt="" />
+          </div>
+          <div class="infor">
+            <div class="btnXoa"><i class="fas fa-trash-alt"></i></div>
+            <div class="name">Nike Blazer Mid '77 Vintage</div>
+            <div class="price">2,929<span>$</span></div>
+            <div class="MSP">Mã sản phẩm: NBM77V</div>
+            <div class="size">Size: 40</div>
+            <div class="SL">
+              Số lượng
+              <input type="number" min="1" placeholder="1" />
+            </div>
+          </div>
+        </div>
+      </aside>
+      <aside class="right">
+        <h1>Đơn hàng</h1>
+        <div class="total">
+          Tổng tiền:
+          <div>2,929<span>$</span></div>
+        </div>
+        <div class="deliver">
+          <div>Giao Hàng</div>
+          <select class="optins">
+            <option value="1">Giao hàng nhanh</option>
+            <option value="2">Giao hàng tiết kiệm</option>
+            <option value="3">Giao hàng miễn phí</option>
+          </select>
+        </div>
+        <div class="City">
+          <div>Tỉnh/Thành phố</div>
+          <select class="optins">
+            <option value="1">TP.Hồ Chí Minh</option>
+            <option value="2">T.Long An</option>
+            <option value="3">TP.Rạch Giá</option>
+          </select>
+        </div>
+        <div class="distric">
+          <div>Quận/Huyện</div>
+          <select class="optins">
+            <option value="1">Quận 1</option>
+            <option value="2">Gò Vấp</option>
+            <option value="3">Thạnh Hóa</option>
+          </select>
+        </div>
+        <div class="btnContanier"><div id="btnDathang">Đặt hàng</div></div>
+      </aside>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <b class="title">Hệ thống cửa hàng</b>
+        <span class="item">48 Nguyễn Thị Tần, F2, Q8, TP.HCM</span>
+        <span class="item">420 Quang Trung, F14, Q.Gò Vấp, TP.HCM</span>
+      </div>
+      <div class="container">
+        <b class="title">Hỗ trợ khách hàng</b>
+        <span class="item">Hot line: 0916707527</span>
+        <span class="item">Gmail: bhtien98@gmail.com</span>
+      </div>
+      <div class="container">
+        <span class="item">MADE BY: Bùi Huỳnh Tiến</span>
+        <span class="item">SĐT:0916707527</span>
+        <span class="item">Gmail: bhtien98@gmail.com</span>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/DatHang.js"></script>
+</html>
