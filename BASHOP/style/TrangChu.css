@@ -8,6 +8,46 @@
 img {
   width: 100%;
 }
+#adv {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#adv #imgCTN {
+  position: relative;
+  width: 700px;
+  height: 500px;
+}
+#adv #imgCTN img {
+  width: 100%;
+}
+#adv #imgCTN p {
+  position: absolute;
+  bottom: 100px;
+  left: 240px;
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+}
+#adv #imgCTN button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
 #header {
   width: 100%;
   display: flex;
@@ -300,6 +340,36 @@ img {
 }
 
 @media only screen and (max-width: 500px) {
+  #adv #imgCTN {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  #adv #imgCTN img {
+    width: 100%;
+  }
+  #adv #imgCTN p {
+    position: absolute;
+    bottom: 170px;
+    left: 90px;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+  }
+  #adv #imgCTN button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+  }
+
   #header {
     width: 100%;
     display: flex;

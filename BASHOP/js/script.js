@@ -50,3 +50,13 @@ window.addEventListener("scroll", function (e) {
   }
   scrollTemp = scrollTop;
 });
+
+var adv = document.getElementById("adv");
+var closeADV = document.getElementById("closeADV");
+
+function closeADV1() {
+  adv.style.display = "none";
+}
+closeADV.onclick = function () {
+  closeADV1();
+};
